@@ -446,7 +446,7 @@
     "contents": [
       {
         "type": "text",
-        "text": "แจ้งยาเข้าใหม่ปีงบ2568",
+        "text": "แจ้งยาเข้าใหม่ปีงบ2569",
         "weight": "bold",
         "size": "xl"
       },
@@ -1368,7 +1368,199 @@
         ShareTargetPicker(Msg)
         }
 
+
+ if(link == "condition"){
+        var A = getParameterByName("A")//ภาพยา
+        var B = getParameterByName("B")//ชื่อยา
+        var C = getParameterByName("C")//codeคีย์ยา
+        var D = getParameterByName("D")//หมายเหตุ
+        var E = getParameterByName("E")//ผู้แจ้ง
+        var Msg = [
        
+     
+          {
+  "type": "flex",
+  "altText": "Notify : Change drug condition",
+  "contents":
+          
+           {
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": ""+A,
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "fit",
+    "action": {
+      "type": "uri",
+      "uri": "https://line.me/"
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "แจ้งเปลี่ยนเงื่อนไขสั่งใช้ยา",
+        "weight": "bold",
+        "size": "xl"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "lg",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "ชื่อยา",
+                "size": "md",
+                "flex": 2,
+                "weight": "bold"
+              },
+              {
+                "type": "text",
+                "text": ""+B,
+                "wrap": true,
+                "color": "#666666",
+                "size": "md",
+                "flex": 5
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "codeยา",
+                "size": "md",
+                "flex": 2,
+                "weight": "bold"
+              },
+              {
+                "type": "text",
+                "text": ""+C,
+                "wrap": true,
+                "color": "#666666",
+                "size": "md",
+                "flex": 5
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "หมายเหตุ",
+                "size": "md",
+                "flex": 2,
+                "weight": "bold"
+              },
+              {
+                "type": "text",
+                "text": ""+D,
+                "wrap": true,
+                "color": "#666666",
+                "size": "md",
+                "flex": 5
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "ผู้แจ้ง",
+                "weight": "bold",
+                "size": "md",
+                "flex": 2
+              },
+              {
+                "type": "text",
+                "text": ""+E,
+                "flex": 5,
+                "size": "md",
+                "color": "#666666",
+                "wrap": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "background": {
+      "type": "linearGradient",
+      "angle": "0deg",
+      "startColor": "#ffffff",
+      "endColor": "#f8bbd0"
+    }
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "button",
+        "style": "link",
+        "height": "sm",
+        "action": {
+          "type": "uri",
+          "label": "คลิกดูรายละเอียด",
+          "uri": "https://www.appsheet.com/start/b918c32f-0fd8-411e-b4fa-b8ba08621414"
+        }
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [],
+        "margin": "sm"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "ความพึงพอใจ/ข้อเสนอแนะ",
+          "uri": "https://docs.google.com/forms/d/e/1FAIpQLSdnYYwCO1jVHUN5LmfQx0n4RzlgxrqVDf6wjXqCQE4MQwmdhA/viewform?usp=sharing&ouid=101221366169542320520"
+        },
+        "height": "sm",
+        "style": "link"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": []
+      }
+    ],
+    "flex": 0
+  }
+}
+            
+         
+            
+          }
+       
+        ]
+        
+        ShareTargetPicker(Msg)
+        }
+
+      
+     
        
        
         if(link == "look"){
